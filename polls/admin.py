@@ -16,6 +16,11 @@ class QuestionAdmin(admin.ModelAdmin):
         ("Date information", {"fields": ["pub_date"], "classes": ["collapse"]}),
     ]
     inlines = [ChoiceInline]
+    list_display = ["question_text", "pub_date", "was_published_recently"]
+    # Adds a "Filter" to the admin interface to filter questions by their publication date.
+    list_filter = ["pub_date"]
+    # Adds a "Search" box to the admin interface to search questions by their text.
+    search_fields = ["question_text"]
 
 # The following line registers the Question model with the admin site using the QuestionAdmin class.
 admin.site.register(Question, QuestionAdmin)

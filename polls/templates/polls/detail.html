@@ -1,6 +1,7 @@
 {% extends 'polls/base.html' %}
 {% block title %}Poll Details{% endblock %}
 {% block content %}
+    <!--We use post method because this form will alter data server-side-->
     <form action="{% url 'polls:vote' question.id %}" method="post">
         {% csrf_token %}
         <fieldset>
@@ -15,5 +16,5 @@
         </fieldset>
         <input type="submit" value="Vote">
         
-    </form>>
+    </form>
 {% endblock %}

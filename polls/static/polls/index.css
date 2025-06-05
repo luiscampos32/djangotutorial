@@ -4,5 +4,5 @@ li a:visited {
 }
 
 body {
-    color: red;
+    background: white url("images/background.jpg") no-repeat;
 }

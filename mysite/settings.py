@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #'debug_toolbar', # Uncomment this line to enable Django Debug Toolbar
 ]
 
 MIDDLEWARE = [
@@ -48,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #'debug_toolbar.middleware.DebugToolbarMiddleware', # Uncomment this line to enable Django Debug Toolbar middleware
 ]
 
 ROOT_URLCONF = 'mysite.urls'
@@ -127,5 +129,12 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
     # Add any additional directories where static files are stored
     "polls/static",
+]
+"""
+# Debug Toolbar settings
+# Uncomment the following lines to enable Django Debug Toolbar
+"""
+INTERNAL_IPS = [
+    "127.0.0.1",
 ]
 """
